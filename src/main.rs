@@ -13,10 +13,14 @@ fn main() {
     }
 }
 
+// This function accepts an optional value of type String and returns either the value parsed as an
+// f32 or None.
 fn convert(n: Option<String>) -> Option<f32> {
     n.and_then(|n| n.parse().ok())
 }
 
+// This function accepts an optional value of type f32 and returns either the value multiplied by
+// 2.0 or None.
 fn double(n: Option<f32>) -> Option<f32> {
     n.map(|n| n * 2.0)
 }
